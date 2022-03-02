@@ -1,0 +1,76 @@
+strain	date	country	region	lineage	Drug_Resistance	Capreomycin	Ethambutol	Rifampicin	Isoniazid	Ethionamide	Streptomycin	Pyrazinamide	Fluoroquinolones	Kanamycin	Amikacin	author	accession
+G19621	2002-11-29	India	South Asia	L1	0											Broad India	SRR1172977;SRR1173643
+G19636	2003-03-08	India	South Asia	L1	1					N345K						Broad India	SRR1173129;SRR1173673
+G19634	2003-02-25	India	South Asia	L1	1					N345K						Broad India	SRR1172710;SRR1175096
+G19647	2003-03-12	India	South Asia	L1	1					N345K						Broad India	SRR1173043;SRR1173178
+G19439	2001-05-11	India	South Asia	L1	1					N345K						Broad India	SRR1172773;SRR1172831
+G19643	2003-03-17	India	South Asia	L1	2					N345K		G132D				Broad India	SRR1173093;SRR1173584
+G19591	2002-07-13	India	South Asia	L1	1					N345K						Broad India	SRR1169559;SRR1172182
+G19464	2002-02-27	India	South Asia	L1	1					N345K						Broad India	SRR1173098;SRR1173611
+G19562	2002-05-04	India	South Asia	L1	2				S315T	N345K						Broad India	SRR1169563;SRR1172226
+G19716	2018-08-08	India	South Asia	L1	1					N345K						Broad India	SRR1169586;SRR1172022
+G19770	2003-07-11	India	South Asia	L1	1					N345K						Broad India	SRR1172787;SRR1175088
+G19676	2003-06-12	India	South Asia	L1	1					N345K						Broad India	SRR1172955;SRR1175071
+G19498	2001-11-05	India	South Asia	L1	1					N345K						Broad India	SRR1173597
+G19659	2003-04-22	India	South Asia	L1	1					N345K						Broad India	SRR1172805;SRR1175135
+G19558	2002-04-29	India	South Asia	L1	1					N345K						Broad India	SRR1169466;SRR1172240
+G19460	2004-09-16	India	South Asia	L1	0											Broad India	SRR1172709;SRR1173036
+G19449	2002-12-09	India	South Asia	L1	0											Broad India	SRR1172752;SRR1172914
+G19759	2003-07-07	India	South Asia	L1	0											Broad India	SRR1172828;SRR1172900
+G19652	2003-04-01	India	South Asia	L1	0											Broad India	SRR1173076;SRR1173152
+G19700	2003-09-22	India	South Asia	L1	0											Broad India	SRR1173010;SRR1173198
+G19458	2001-01-24	India	South Asia	L1	0											Broad India	SRR1172779;SRR1173084
+G19710	2003-11-04	India	South Asia	L1	0											Broad India	SRR1172788;SRR1175027
+G19668	2003-06-25	India	South Asia	L1	1				S315T							Broad India	SRR1172942;SRR1175155
+G19708	2003-10-31	India	South Asia	L1	0											Broad India	SRR1172881;SRR1175036
+G19648	2003-03-26	India	South Asia	L1	0											Broad India	SRR1173029;SRR1173275
+G19760	2003-07-07	India	South Asia	L1	0											Broad India	SRR1172950;SRR1175123
+G19467	2004-03-27	India	South Asia	L1	3		M306V	L452P	S315T							Broad India	SRR1172848;SRR1172873
+G19442	2001-08-21	India	South Asia	L1	0											Broad India	SRR1172813;SRR1173035
+G19528	2001-11-07	India	South Asia	L1	0											Broad India	SRR1169591;SRR1172086
+G19542	2002-03-11	India	South Asia	L1	0											Broad India	SRR1169531;SRR1174830
+G19569	2002-05-28	India	South Asia	L1	0											Broad India	SRR1169496;SRR1172329
+G19575	2002-05-29	India	South Asia	L1	0											Broad India	SRR1169476;SRR1172227
+G19472	2001-10-06	India	South Asia	L1	0											Broad India	SRR1169589;SRR1172321
+G19571	2002-06-03	India	South Asia	L1	0											Broad India	SRR1169517;SRR1172232
+G19496	2001-02-11	India	South Asia	L1	2				C-15T	C-15T						Broad India	SRR1169570;SRR1172139
+G19476	2001-10-08	India	South Asia	L1	0											Broad India	SRR1169573;SRR1172163
+G19686	2003-07-21	India	South Asia	L1	0											Broad India	SRR1173046;SRR1173209
+G19762	2003-07-05	India	South Asia	L1	0											Broad India	SRR1172939;SRR1175035
+G19526	2001-11-09	India	South Asia	L1	0											Broad India	SRR1169548;SRR1172052
+G19599	2002-08-20	India	South Asia	L1	0											Broad India	SRR1169512;SRR1172054
+G19453	2002-12-16	India	South Asia	L1	2				C-15T	C-15T						Broad India	SRR1172985;SRR1173012
+G19482	2001-10-09	India	South Asia	L1	0											Broad India	SRR1169536;SRR1172280
+G19474	2001-10-08	India	South Asia	L1	0											Broad India	SRR1169585;SRR1174822
+G19514	2002-04-23	India	South Asia	L1	0											Broad India	SRR1169547;SRR1172134
+G19446	2001-04-25	India	South Asia	L1	0											Broad India	SRR1173077;SRR1173110
+G19488	2001-10-29	India	South Asia	L1	0											Broad India	SRR1169533;SRR1174823
+G19749	2002-08-14	India	South Asia	L1	0											Broad India	SRR1169538;SRR1172125
+G19520	2002-02-10	India	South Asia	L1	3			S441L	S315T		K43R					Broad India	SRR1169590;SRR1172225
+G19579	2002-06-03	India	South Asia	L1	0											Broad India	SRR1169624;SRR1172202
+G19500	2001-11-06	India	South Asia	L1	0											Broad India	SRR1173345
+G19492	2001-11-01	India	South Asia	L1	1				S315T							Broad India	SRR1169527;SRR1172315
+G19461	2004-09-17	India	South Asia	L1	0											Broad India	SRR1172904;SRR1173037
+G19731	2002-04-23	India	South Asia	L1	0											Broad India	SRR1172886
+G19518	2002-04-23	India	South Asia	L1	0											Broad India	SRR1173258
+G19466	2005-02-17	India	South Asia	L1	0											Broad India	SRR1172722;SRR1172840
+G19534	2002-02-25	India	South Asia	L1	0											Broad India	SRR1169465;SRR1174840
+G19709	2003-10-31	India	South Asia	L3	0											Broad India	SRR1172968;SRR1173559
+G19626	2003-01-03	India	South Asia	L3	0											Broad India	SRR1173028;SRR1173216
+G19484	2001-10-24	India	South Asia	L3	0											Broad India	SRR1172879
+G19530	2001-11-07	India	South Asia	L3	0											Broad India	SRR1173567
+G19763	2003-06-26	India	South Asia	L3	0											Broad India	SRR1172992;SRR1173693
+G19620	2002-11-26	India	South Asia	L3	0											Broad India	SRR1172827;SRR1175043
+G19540	2002-03-06	India	South Asia	L3	0											Broad India	SRR1173440
+G19448	2003-03-05	India	South Asia	L3	2				C-15T	C-15T						Broad India	SRR1172751;SRR1175173
+G19737	2002-05-21	India	South Asia	L3	1				S315T							Broad India	SRR1169499;SRR1172176
+G19611	2002-09-16	India	South Asia	L3	1			S450L								Broad India	SRR1169539;SRR1172136
+G19550	2002-04-10	India	South Asia	L3	0											Broad India	SRR1169495;SRR1172060
+G19765	2003-06-30	India	South Asia	L3	0											Broad India	SRR1173644
+G19538	2002-03-07	India	South Asia	L3	0											Broad India	SRR1169549;SRR1172102
+G19622	2002-11-27	India	South Asia	L3	1						L79S					Broad India	SRR1172797;SRR1175108
+G19522	2001-11-07	India	South Asia	L3	0											Broad India	SRR1169552;SRR1172135
+G19440	2001-09-12	India	South Asia	L2	1					P334A						Broad India	SRR1172825;SRR1172930
+G19711	2003-11-01	India	South Asia	L2	0											Broad India	SRR1172875;SRR1175062
+G19771	2003-11-25	India	South Asia	L2	0											Broad India	SRR1172822;SRR1175109
+G19715	2004-10-22	India	South Asia	L4	0											Broad India	SRR1172738;SRR1172979
