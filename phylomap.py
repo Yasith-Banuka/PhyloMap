@@ -1,23 +1,26 @@
 #! /usr/bin/env python
-try:
-    import sys
-    import math
-    import random
-    import argparse
-    import os
-    import shutil
-    import subprocess
-    from ete2 import Tree
-    from nexus import NexusReader
-    from numpy import shape, add, sum, sqrt, argsort, transpose, newaxis
-    from numpy.linalg import eigh
-    import numpy as np
-except ImportError:
-    print("Please install the matplotlib and other dependent package first.")
-    print("If your OS is ubuntu or has apt installed, you can try the following:") 
-    print(" sudo apt-get install python-setuptools python-numpy python-qt4 python-scipy python-mysqldb python-lxml python-matplotlib")
-    sys.exit()
-
+# try:
+import sys
+import math
+import random
+import argparse
+import os
+import shutil
+import subprocess
+from ete3 import Tree
+from nexus import NexusReader
+from numpy import shape, add, sum, sqrt, argsort, transpose, newaxis
+from numpy.linalg import eigh
+import numpy as np
+# except ImportError:
+#     print("Please install the matplotlib and other dependent package first.")
+#     print("If your OS is ubuntu or has apt installed, you can try the following:") 
+#     print(" sudo apt-get install python-setuptools python-numpy python-qt4 python-scipy python-mysqldb python-lxml python-matplotlib")
+#     sys.exit()
+def divZ(a,b):
+    if b==0:
+        return a
+    return a/b
 def principal_coordinates_analysis(distance_matrix):
     """Takes a distance matrix and returns principal coordinate results
 
@@ -62,9 +65,9 @@ def make_F_matrix(E_matrix):
     column_means = (add.reduce(E_matrix) / num_rows)[:,newaxis]
     trans_matrix = transpose(E_matrix)
     row_sums = add.reduce(trans_matrix)
-    row_means = row_sums / num_cols
+    row_means = divZ(row_sums , num_cols)
     #calculate the mean of the whole matrix
-    matrix_mean = sum(row_sums) / (num_rows * num_cols)
+    matrix_mean = divZ(sum(row_sums) , (num_rows * num_cols))
     #adjust each element in the E matrix to make the F matrix
 
     E_matrix -= row_means
@@ -106,12 +109,12 @@ def distance(c1, c2):
 
 def firstDstep(d_tree, d_mds, d_coord_c, d_coord_u):
     d=0.0
-    d=((d_tree-d_mds)/(d_tree*d_mds))*(d_coord_u-d_coord_c)
+    d=(divZ((d_tree-d_mds),(d_tree*d_mds)))*(d_coord_u-d_coord_c)
     return d
 
 def secondDstep(d_tree, d_mds, d_coord_c, d_coord_u):
     d=0.0
-    d=((d_tree-d_mds)-((d_coord_u-d_coord_c)*(d_coord_u-d_coord_c)/d_mds)*(1+((d_tree-d_mds)/d_mds)))/(d_tree*d_mds)
+    d=divZ(((d_tree-d_mds)-divZ((d_coord_u-d_coord_c)*(d_coord_u-d_coord_c),d_mds)*(1+(divZ((d_tree-d_mds),d_mds)))),(d_tree*d_mds))
     return d
 
 def raxmlTreeParser(fin):
@@ -225,7 +228,7 @@ class phylomap:
         sumev = 0
         for evv in ev:
             sumev += abs(evv)
-        return ev[0]/sumev, ev[1]/sumev
+        return divZ(ev[0],sumev), divZ(ev[1],sumev)
     
     
     def extract_species_tree(self):
@@ -308,8 +311,8 @@ class phylomap:
                 d_tree = self.innernode_dis_tree_matrix.get(namei+":"+namej)
                 d_mds  = self.innernode_dis_mds_matrix.get(namei+":"+namej)
                 if d_tree!=None and d_mds!=None:
-                    err=err+(d_tree-d_mds)*(d_tree-d_mds)/d_tree
-        return err/self.sum_species_tree_length
+                    err=err+divZ((d_tree-d_mds)*(d_tree-d_mds),d_tree)
+        return divZ(err,self.sum_species_tree_length)
     
     
     def update(self, node_name, only_shorter = False):
@@ -339,17 +342,17 @@ class phylomap:
             if changed:
                 d2x = abs(d2x)
                 d2y = abs(d2y)
-                deltaX=-d1x/d2x
+                deltaX=-divZ(d1x,d2x)
                 coord_upnode[0]=coord_upnode[0]-self.mf*deltaX
-                deltaY=-d1y/d2y
+                deltaY=-divZ(d1y,d2y)
                 coord_upnode[1]=coord_upnode[1]-self.mf*deltaY
                 self.name_coords[node_name] = coord_upnode
         else:
             d2x = abs(d2x)
             d2y = abs(d2y)
-            deltaX=-d1x/d2x
+            deltaX=-divZ(d1x,d2x)
             coord_upnode[0]=coord_upnode[0]-self.mf*deltaX
-            deltaY=-d1y/d2y
+            deltaY=-divZ(d1y,d2y)
             coord_upnode[1]=coord_upnode[1]-self.mf*deltaY
             self.name_coords[node_name] = coord_upnode
 
@@ -365,7 +368,7 @@ class phylomap:
         
         improve_cnt = 0
         last_mapping_err = mapping_err
-        index = range(len(self.inner_node_names))
+        index = list(range(len(self.inner_node_names)))
         for i in range(self.maxiters):
             random.shuffle(index)
             for idx in index:
@@ -401,8 +404,8 @@ class phylomap:
                 l_tree_dis = self.innernode_dis_tree_matrix[node.name + ":" + childs[0].name] 
                 r_mds_dis = self.innernode_dis_mds_matrix[node.name + ":" + childs[1].name]
                 r_tree_dis = self.innernode_dis_tree_matrix[node.name + ":" + childs[1].name] 
-                l_ratio = (l_tree_dis - l_mds_dis)/l_mds_dis
-                r_ratio = (r_tree_dis - r_mds_dis)/r_mds_dis
+                l_ratio = divZ((l_tree_dis - l_mds_dis),l_mds_dis)
+                r_ratio = divZ((r_tree_dis - r_mds_dis),r_mds_dis)
                 lstroke = math.erf(l_ratio)
                 rstroke = math.erf(r_ratio)
                 if lstroke < 0:
@@ -504,8 +507,8 @@ if __name__ == "__main__":
         os.makedirs(dstdir)
         os.makedirs(dstdir2)
         shutil.copy2(os.path.join(basepath, "phylomap.pde"), dstdir)
-    except OSError, e:
-        print(e)
+    except OSError:
+        #print(e)
         sys.exit()
     
     pm = phylomap(largetree = args.trees, 

@@ -55,17 +55,17 @@ from evol import EvolTree
 
 try:
     from coretype.arraytable import *
-except ImportError, e:
+except ImportError:
     print >>stderr, "Clustering module could not be loaded"
-    print e
+    #print e
 else:
     from clustering.clustertree import *
 
 try:
     from phylomedb.phylomeDB3 import *
-except ImportError, e:
+except ImportError:
     print >>stderr, " MySQLdb module could not be loaded"
-    print e
+    #print e
 
 try:
     from treeview.main import *
@@ -73,9 +73,9 @@ try:
     from treeview import faces
     from treeview import layouts
     from treeview.svg_colors import *
-except ImportError, e:
+except ImportError:
     print >>stderr, "Treeview module could not be loaded"
-    print e
+    #print e
 
 # Do not modify the following line. It will be checked during
 # installation
