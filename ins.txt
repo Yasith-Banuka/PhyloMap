@@ -1,0 +1,1 @@
+python phylomap.py -t Output/myoutput.PTPhSupportPartition.txt.sh.tre -p Output/myoutput.PTPhSupportPartition.txt -o example/t6/ -m 5
